@@ -1,132 +1,107 @@
-# PocketLab
+# PocketLab (ESP32 Port)
+
 <div align="center">
-<img src="screenshots/demo_v1.5.gif" alt="PocketLab walkthrough" width="520">
+
+<img src="screenshots/demo_v1.5.gif" alt="PocketLab Demo" width="480">
 
 <br/>
 
-**Gamified, on-device learning for [Flipper Zero](https://github.com/flipperdevices).**
+**Aprende a dominar las funciones de Flipper con laboratorios interactivos y gamificados, ahora en tu ESP32.**  
+*Gamified, on-device interactive learning for Flipper Zero & ESP32 Dev Boards.*
 
-[![Flipper Apps Catalog](https://img.shields.io/badge/Flipper%20Apps%20Catalog-PocketLab-FF8200)](https://lab.flipper.net/apps/pocketlab)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Latest release](https://img.shields.io/github/v/release/PerfectoWeb/flipper-pocketlab?color=FF8200&label=release)](https://github.com/PerfectoWeb/flipper-pocketlab/releases/latest)
-[![Flipper](https://img.shields.io/badge/Flipper-Official%20FW-FF8200)](https://flipperzero.one/)
+[![Target: ESP32-S3](https://img.shields.io/badge/Target-ESP32--S3-orange.svg)](https://github.com/Sor3nt/Flipper-Zero-ESP32-Port)
+[![Hardware: LilyGO T-Embed](https://img.shields.io/badge/Hardware-LilyGO%20T--Embed%20CC1101-blueviolet.svg)](https://afel.cl/products/modulo-esp32-s3-t-embed-cc1101-lilygo)
 
 </div>
 
 ---
 
-## 📚 What is it?
+## 🙏 Agradecimientos y Créditos / Acknowledgements
 
-The biggest problem in the Flipper ecosystem is new-user churn: people buy a
-[Flipper Zero](https://github.com/flipperdevices), don't know where to start, get
-bored, and resell it. **PocketLab is the missing onboarding layer** – a guided,
-legal and genuinely fun way to learn what your Flipper can do, one small lab at a
-time.
+Este proyecto es una adaptación y compilación de **PocketLab** para el ecosistema de **Flipper Zero en ESP32**. Agradecemos profundamente a:
 
-## ✨ Features
+* **[PerfectoWeb (@PerfectoWeb)](https://github.com/PerfectoWeb)**: Creador original de [flipper-pocketlab](https://github.com/PerfectoWeb/flipper-pocketlab), por conceptualizar y programar esta increíble aplicación de aprendizaje gamificado (labs, quizzes, insignias, progresión y animaciones).
+* **[@Sor3nt](https://github.com/Sor3nt)**: Creador del port maestro [Flipper-Zero-ESP32-Port](https://github.com/Sor3nt/Flipper-Zero-ESP32-Port), que hace posible ejecutar Furi OS, la GUI canvas y el cargador dinámico de FAPs en microcontroladores ESP32 (LilyGO T-Embed, Waveshare, DIY boards).
+* **[Flipper Devices](https://flipperzero.one/)**: Creadores del Flipper Zero y de la plataforma de desarrollo original.
 
-- 🎓 **36 labs** across 11 tracks: IR, Sub-GHz, RFID, NFC, iButton, Bad USB,
-  GPIO, Bluetooth, security, system and more – including **advanced deep-dives**
-  (MIFARE key recovery / MFKey32, T5577 cloning, IR protocols, and more)
-- 🎲 **Randomized quizzes** – a pool of distractors, shuffled every attempt, so
-  you learn the answer, not its position
-- 🧠 **Quiz mode** – a random exam drawn from the labs you've completed, scored
-  at the end and rewarding XP, to test what stuck
-- 🌍 **English and Russian** – the full interface plus every lab and quiz, with a
-  language switch in Settings
-- 🏆 **Progression** – XP, levels, a daily streak and unlockable badges, all
-  saved on the SD card
-- 🖼️ **A unique badge icon for every lab**, so the subject reads at a glance
-- 🔊 **Sound, LED & Vibro** – audio, RGB-LED and vibration feedback, each with its
-  own on/off toggle in Settings
-- 🖥️ **Custom animated UI** – tile menu, a badge gallery, stat cards and a
-  matrix-rain About screen
-- 📦 **No extra hardware** – pure software, runs on a stock Flipper Zero
+---
 
+## 📚 ¿Qué es PocketLab?
 
-## 📸 Screenshots
+**PocketLab** es una plataforma educativa interactiva integrada directamente en tu dispositivo. En lugar de leer documentación estática, aprendes mediante retos prácticos cortos, cuestionarios con opciones aleatorias, y un sistema de logros con XP, rachas diarias y medallas desbloqueables.
+
+### ✨ Características principales:
+* 🎓 **36 Laboratorios prácticos** organizados en 11 disciplinas:
+  * **Infrarrojos (IR):** Protocolos, captura y transmisión.
+  * **Sub-GHz:** Modulaciones, CC1101, analizador de frecuencias y RAW.
+  * **RFID & NFC:** Lectura de tarjetas, clonación T5577, recuperación de llaves MIFARE (MFKey32).
+  * **iButton, BadUSB, GPIO y Bluetooth.**
+* 🎲 **Cuestionarios aleatorizados:** Las opciones incorrectas y el orden cambian en cada intento para asegurar un aprendizaje real.
+* 🧠 **Modo Examen:** Evalúa tus conocimientos con preguntas aleatorias basadas en los laboratorios que ya has completado.
+* 🏆 **Sistema de progresión:** Acumula XP, sube de nivel (Novice, Apprentice, Explorer... Master) y gana medallas exclusivas con iconos dedicados.
+* 🔊 **Efectos completos:** Soporte para sonido acústico, efectos de luz RGB-LED y retroalimentación háptica (vibración).
+* 🌍 **Idiomas:** Totalmente disponible en **Inglés** y **Ruso** (con fuentes Cirílicas u8g2 personalizadas incluidas).
+* 💾 **Persistencia:** Todo el progreso se guarda de forma segura en la tarjeta microSD (`/ext/apps_data/pocketlab/state.bin`).
+
+---
+
+## 📸 Capturas de pantalla
 
 <div align="center">
 
-| Menu | Labs | Quiz |
+| Menú Principal | Lista de Labs | Cuestionario |
 |:---:|:---:|:---:|
-| <img src="screenshots/menu.png" width="240"> | <img src="screenshots/labs.png" width="240"> | <img src="screenshots/quiz.png" width="240"> |
-| **Profile** | **Achievements** | **About** |
-| <img src="screenshots/profile.png" width="240"> | <img src="screenshots/achievements.png" width="240"> | <img src="screenshots/about.png" width="240"> |
-| **Level Up** | **Lab Complete** | **Settings** |
-| <img src="screenshots/levelup.png" width="240"> | <img src="screenshots/animations-1.png" width="240"> | <img src="screenshots/settings.png" width="240"> |
+| <img src="screenshots/menu.png" width="220"> | <img src="screenshots/labs.png" width="220"> | <img src="screenshots/quiz.png" width="220"> |
+| **Perfil & XP** | **Insignias** | **Subida de Nivel** |
+| <img src="screenshots/profile.png" width="220"> | <img src="screenshots/achievements.png" width="220"> | <img src="screenshots/levelup.png" width="220"> |
 
 </div>
 
-## 📥 Installation
+---
 
-### A. Flipper Apps Catalog (easiest)
+## 🎮 Compatibilidad y Hardware
 
-Open **[PocketLab on the Flipper Apps Catalog »](https://lab.flipper.net/apps/pocketlab)**
-and hit **Install** from the Flipper mobile app or qFlipper, or find it right on
-the device under **Apps → Tools**.
+Esta compilación en formato `.fap` (ELF reubicable para Xtensa LX7) está optimizada para:
 
-### B. Manual install
+* **LilyGO T-Embed ESP32-S3 CC1101**
+* **Módulos DIY ESP32-S3** con pantalla LCD ST7789 / ILI9341 ejecutando el Flipper ESP32 Port.
+* **Cualquier módulo ESP32-S3** con soporte para el port de Flipper Zero.
 
-1. Download **`pocketlab.fap`** from the
-   [latest release »](https://github.com/PerfectoWeb/flipper-pocketlab/releases/latest/download/pocketlab.fap)
-2. Copy it to your Flipper's SD card into `apps/Tools/`
-3. On the device open **Apps → Tools → PocketLab** 🎉
+### Controles (LilyGO T-Embed):
+* **Rotary Encoder (Girar):** Navegar por las opciones del menú, preguntas del quiz y galerías de insignias.
+* **Pulsar Botón Central del Encoder (OK):** Confirmar respuesta, seleccionar lab o avanzar.
+* **Botón Lateral (Back):** Volver atrás o salir al menú de Flipper.
 
-### C. Build from source (ufbt)
+---
 
-<details>
-<summary>Show build instructions</summary>
+## 🚀 Instalación en la microSD
 
-[`ufbt`](https://pypi.org/project/ufbt/) builds Flipper apps without a full
-firmware checkout:
+1. Descarga el archivo **`pocketlab.fap`** desde la carpeta [`dist/`](dist/pocketlab.fap) de este repositorio.
+2. Inserta la tarjeta microSD en tu computadora (o conecta el dispositivo vía *USB Storage*).
+3. Copia `pocketlab.fap` en la siguiente ruta:
+   ```text
+   /ext/apps/Tools/pocketlab.fap
+   ```
+4. Expulsa la tarjeta de forma segura e insértala en tu placa ESP32.
+5. Inicia el sistema y navega a:  
+   **Archive ➔ Apps ➔ Tools ➔ PocketLab**
 
-```sh
-pipx install ufbt # or: pip3 install --user ufbt
+> ⚠️ **Nota de compatibilidad de Firmware:** PocketLab utiliza melodías y fuentes avanzadas de Furi. Requiere una versión del firmware Flipper ESP32 que exporte estos símbolos en `firmware_api.c`.
 
-git clone https://github.com/PerfectoWeb/flipper-pocketlab.git
-cd flipper-pocketlab
+---
 
-ufbt # builds dist/pocketlab.fap
-ufbt launch # build, upload to a connected Flipper, and run
+## 🛠️ Compilación desde el código fuente
+
+Si quieres compilar o modificar PocketLab por tu cuenta:
+
+```bash
+# Desde el directorio del firmware Flipper-Zero-ESP32-Port:
+python build_fap.py /ruta/a/flipper-pocketlab --output-dir /ruta/a/flipper-pocketlab/dist
 ```
 
-The build output lands in `dist/pocketlab.fap`.
+---
 
-</details>
+## 📄 Licencia
 
-## 🧩 Create your own lab
-
-Labs are **data, not code**. Add a `PocketLabStep` array and a `PocketLabLab`
-entry in [`helpers/pocketlab_content.c`](helpers/pocketlab_content.c) – the engine
-renders `text`, `quiz`, `try` and `reward` steps for you. No engine changes needed.
-
-## 🏗️ Architecture
-
-Standard Flipper app structure: a `ViewDispatcher` driving a `SceneManager`, with
-content and state kept as plain data.
-
-```text
-pocketlab.c              App lifecycle, XP/level/award logic, entry point
-pocketlab_i.h            Shared app context and public helpers
-scenes/                  SceneManager scenes (menu, labs, lesson, progress, badges,
-                         levelup, exam, settings, reset_confirm, about)
-views/                   Custom animated views (home, lesson, labs list, progress,
-                         badges, levelup, exam, about)
-helpers/
-  pocketlab_content.*    Labs as data (step arrays + topic glyph)
-  pocketlab_i18n.*       UI string table
-  pocketlab_sound.*      Notification sequences
-  pocketlab_storage.*    Versioned save/load on the SD card
-```
-
-## 💬 Support & Contributions
-
-- 💬 Found a bug or have a feature request? [Open an Issue](https://github.com/PerfectoWeb/flipper-pocketlab/issues)
-- ⭐ Like the project? [Star the repo](https://github.com/PerfectoWeb/flipper-pocketlab)! [Give a coffee](https://perfecto-web.com/d/)!
-- 🛠 Want to contribute? [Fork it](https://github.com/PerfectoWeb/flipper-pocketlab/fork) and submit a pull request.
-
-## 📝 License
-
-MIT – see [LICENSE](LICENSE). 
-Made with ♥ by [PerfectoWeb](https://github.com/PerfectoWeb).
+Este proyecto mantiene la licencia original **MIT License**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
