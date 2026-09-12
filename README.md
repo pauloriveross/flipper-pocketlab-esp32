@@ -6,8 +6,7 @@
 
 <br/>
 
-**Aprende a dominar las funciones de Flipper con laboratorios interactivos y gamificados, ahora en tu ESP32.**  
-*Gamified, on-device interactive learning for Flipper Zero & ESP32 Dev Boards.*
+**Gamified, on-device interactive learning for Flipper Zero, now on ESP32 development boards.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Target: ESP32-S3](https://img.shields.io/badge/Target-ESP32--S3-orange.svg)](https://github.com/Sor3nt/Flipper-Zero-ESP32-Port)
@@ -17,91 +16,91 @@
 
 ---
 
-## 🙏 Agradecimientos y Créditos / Acknowledgements
+## 🙏 Acknowledgements & Credits
 
-Este proyecto es una adaptación y compilación de **PocketLab** para el ecosistema de **Flipper Zero en ESP32**. Agradecemos profundamente a:
+This project is a port and compilation of **PocketLab** for the **Flipper Zero ESP32 ecosystem**. Huge thanks to:
 
-* **[PerfectoWeb (@PerfectoWeb)](https://github.com/PerfectoWeb)**: Creador original de [flipper-pocketlab](https://github.com/PerfectoWeb/flipper-pocketlab), por conceptualizar y programar esta increíble aplicación de aprendizaje gamificado (labs, quizzes, insignias, progresión y animaciones).
-* **[@Sor3nt](https://github.com/Sor3nt)**: Creador del port maestro [Flipper-Zero-ESP32-Port](https://github.com/Sor3nt/Flipper-Zero-ESP32-Port), que hace posible ejecutar Furi OS, la GUI canvas y el cargador dinámico de FAPs en microcontroladores ESP32 (LilyGO T-Embed, Waveshare, DIY boards).
-* **[Flipper Devices](https://flipperzero.one/)**: Creadores del Flipper Zero y de la plataforma de desarrollo original.
-
----
-
-## 📚 ¿Qué es PocketLab?
-
-**PocketLab** es una plataforma educativa interactiva integrada directamente en tu dispositivo. En lugar de leer documentación estática, aprendes mediante retos prácticos cortos, cuestionarios con opciones aleatorias, y un sistema de logros con XP, rachas diarias y medallas desbloqueables.
-
-### ✨ Características principales:
-* 🎓 **36 Laboratorios prácticos** organizados en 11 disciplinas:
-  * **Infrarrojos (IR):** Protocolos, captura y transmisión.
-  * **Sub-GHz:** Modulaciones, CC1101, analizador de frecuencias y RAW.
-  * **RFID & NFC:** Lectura de tarjetas, clonación T5577, recuperación de llaves MIFARE (MFKey32).
-  * **iButton, BadUSB, GPIO y Bluetooth.**
-* 🎲 **Cuestionarios aleatorizados:** Las opciones incorrectas y el orden cambian en cada intento para asegurar un aprendizaje real.
-* 🧠 **Modo Examen:** Evalúa tus conocimientos con preguntas aleatorias basadas en los laboratorios que ya has completado.
-* 🏆 **Sistema de progresión:** Acumula XP, sube de nivel (Novice, Apprentice, Explorer... Master) y gana medallas exclusivas con iconos dedicados.
-* 🔊 **Efectos completos:** Soporte para sonido acústico, efectos de luz RGB-LED y retroalimentación háptica (vibración).
-* 🌍 **Idiomas:** Totalmente disponible en **Inglés** y **Ruso** (con fuentes Cirílicas u8g2 personalizadas incluidas).
-* 💾 **Persistencia:** Todo el progreso se guarda de forma segura en la tarjeta microSD (`/ext/apps_data/pocketlab/state.bin`).
+* **[PerfectoWeb (@PerfectoWeb)](https://github.com/PerfectoWeb)**: Original creator of [flipper-pocketlab](https://github.com/PerfectoWeb/flipper-pocketlab), for conceptualizing and developing this fantastic gamified learning platform (interactive labs, quizzes, achievements, progression mechanics, and animations).
+* **[@Sor3nt](https://github.com/Sor3nt)**: Author of the [Flipper-Zero-ESP32-Port](https://github.com/Sor3nt/Flipper-Zero-ESP32-Port), enabling Furi OS, the UI canvas, and FAP dynamic loading on ESP32 hardware (LilyGO T-Embed, Waveshare, DIY boards).
+* **[Flipper Devices](https://flipperzero.one/)**: For creating the original Flipper Zero platform.
 
 ---
 
-## 📸 Capturas de pantalla
+## 📚 What is PocketLab?
+
+**PocketLab** is an interactive, on-device learning layer. Instead of reading through static wiki documentation, you learn by doing short hands-on labs, answering randomized quizzes, and unlocking levels, XP, streaks, and custom badges.
+
+### ✨ Key Features:
+* 🎓 **36 Hands-on Labs** across 11 tracks:
+  * **Infrared (IR):** Protocols, raw learning, and universal remote principles.
+  * **Sub-GHz:** Modulations, CC1101 transceiver, frequency analyzer, and RAW capture.
+  * **RFID & NFC:** Reading, T5577 cloning, MIFARE key recovery (MFKey32).
+  * **iButton, BadUSB, GPIO, and Bluetooth.**
+* 🎲 **Randomized Quizzes:** Shuffled questions and distractors prevent position memorization and ensure real comprehension.
+* 🧠 **Exam Mode:** Random quiz generated from completed labs to test retention.
+* 🏆 **Progression System:** Earn XP, level up (Novice, Apprentice, Explorer... Master), maintain daily streaks, and collect unique badge artwork.
+* 🔊 **Rich Feedback:** Acoustic sound notes, RGB LED illumination, and haptic vibration feedback with individual toggles in Settings.
+* 🌍 **Dual Languages:** Fully available in **English** and **Russian** (including custom Cyrillic u8g2 fonts).
+* 💾 **Persistent State:** Saves progress securely to microSD storage (`/ext/apps_data/pocketlab/state.bin`).
+
+---
+
+## 📸 Screenshots
 
 <div align="center">
 
-| Menú Principal | Lista de Labs | Cuestionario |
+| Menu | Labs List | Quiz |
 |:---:|:---:|:---:|
 | <img src="screenshots/menu.png" width="220"> | <img src="screenshots/labs.png" width="220"> | <img src="screenshots/quiz.png" width="220"> |
-| **Perfil & XP** | **Insignias** | **Subida de Nivel** |
+| **Profile & XP** | **Badges** | **Level Up** |
 | <img src="screenshots/profile.png" width="220"> | <img src="screenshots/achievements.png" width="220"> | <img src="screenshots/levelup.png" width="220"> |
 
 </div>
 
 ---
 
-## 🎮 Compatibilidad y Hardware
+## 🎮 Hardware Compatibility & Controls
 
-Esta compilación en formato `.fap` (ELF reubicable para Xtensa LX7) está optimizada para:
+This `.fap` binary is compiled for Xtensa LX7 (`xtensa-esp32s3-elf`) and tested on:
 
 * **LilyGO T-Embed ESP32-S3 CC1101**
-* **Módulos DIY ESP32-S3** con pantalla LCD ST7789 / ILI9341 ejecutando el Flipper ESP32 Port.
-* **Cualquier módulo ESP32-S3** con soporte para el port de Flipper Zero.
+* **DIY ESP32-S3 development boards** with ST7789 / ILI9341 LCD displays running the Flipper ESP32 Port.
+* **Any ESP32-S3 module** running the Flipper Zero ESP32 firmware port.
 
-### Controles (LilyGO T-Embed):
-* **Rotary Encoder (Girar):** Navegar por las opciones del menú, preguntas del quiz y galerías de insignias.
-* **Pulsar Botón Central del Encoder (OK):** Confirmar respuesta, seleccionar lab o avanzar.
-* **Botón Lateral (Back):** Volver atrás o salir al menú de Flipper.
+### Controls (LilyGO T-Embed):
+* **Rotary Encoder (Rotate):** Navigate menu items, quiz options, and badge galleries.
+* **Center Encoder Button (Click / OK):** Confirm selection, submit quiz answer, or start lab.
+* **Side Button (Back):** Go back or exit to the main Flipper desktop.
 
 ---
 
-## 🚀 Instalación en la microSD
+## 🚀 Installation
 
-1. Descarga el archivo **`pocketlab.fap`** desde la carpeta [`dist/`](dist/pocketlab.fap) de este repositorio.
-2. Inserta la tarjeta microSD en tu computadora (o conecta el dispositivo vía *USB Storage*).
-3. Copia `pocketlab.fap` en la siguiente ruta:
+1. Download **`pocketlab.fap`** from the [`dist/`](dist/pocketlab.fap) folder in this repository.
+2. Insert your microSD card into your PC (or use the device in *USB Storage* mode).
+3. Copy `pocketlab.fap` into:
    ```text
    /ext/apps/Tools/pocketlab.fap
    ```
-4. Expulsa la tarjeta de forma segura e insértala en tu placa ESP32.
-5. Inicia el sistema y navega a:  
+4. Safely eject the card and reinsert it into your ESP32 board.
+5. Boot the board and navigate to:  
    **Archive ➔ Apps ➔ Tools ➔ PocketLab**
 
-> ⚠️ **Nota de compatibilidad de Firmware:** PocketLab utiliza melodías y fuentes avanzadas de Furi. Requiere una versión del firmware Flipper ESP32 que exporte estos símbolos en `firmware_api.c`.
+> ⚠️ **Firmware API Requirement:** PocketLab utilizes notification melody notes and custom u8g2 font routines. Make sure your Flipper ESP32 firmware exports these symbols in `firmware_api.c`.
 
 ---
 
-## 🛠️ Compilación desde el código fuente
+## 🛠️ Building from Source
 
-Si quieres compilar o modificar PocketLab por tu cuenta:
+To build or modify PocketLab:
 
 ```bash
-# Desde el directorio del firmware Flipper-Zero-ESP32-Port:
-python build_fap.py /ruta/a/flipper-pocketlab --output-dir /ruta/a/flipper-pocketlab/dist
+# From the root directory of Flipper-Zero-ESP32-Port:
+python build_fap.py /path/to/flipper-pocketlab --output-dir /path/to/flipper-pocketlab/dist
 ```
 
 ---
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto mantiene la licencia original **MIT License**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+This project retains the original **MIT License**. See [LICENSE](LICENSE) for details.
