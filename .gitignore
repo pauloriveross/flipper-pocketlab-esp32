@@ -1,0 +1,23 @@
+# ufbt local SDK metadata (SDK itself lives in ~/.ufbt)
+.ufbt/
+
+# Editors / IDE
+/.vscode/
+/.idea/
+.nova/
+.zed/
+*.swp
+
+# OS
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Internal dev handoff (not part of the app)
+/docs/SESSION-BRIEF.md
+
+# Allow precompiled .fap binaries in dist/
+!/dist/
+!/dist/*.fap
